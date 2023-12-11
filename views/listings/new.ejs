@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-md-6 offset-3">
+    <h3>Create a new listings</h3>
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+            <label for="category" class="form-label">Title</label>
+            <select class="form-select" id="category" name="list[category]" required>
+                <option value="">Please select Category</option>
+                <option value="Farms">Farms</option>
+                <option value="Rooms">Rooms</option>
+                <option value="Mountains">Mountains</option>
+                <option value="Amazing Pools">Amazing Pools</option>
+                <option value="Trending">Trending</option>
+                <option value="Camping">Camping</option>
+                <option value="Castles">Castles</option>
+                <option value="Iconic Cities">Iconic Cities</option>
+            </select>
+        </div>
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="list[title]" placeholder="Enter Title" class="form-control" required>
+            <div class="valid-feedback">looks good!</div>
+            <div class="invalid-feedback">Please enter a title</div>
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <input type="text" name="list[description]" placeholder="Enter description" class="form-control" required>
+            <div class="valid-feedback">looks good!</div>
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div>  
+        <div>
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="list[image]" class="form-control" required>
+            <div class="valid-feedback">looks good!</div>
+            <div class="invalid-feedback">Please enter a image</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" name="list[price]" placeholder="Enter price" class="form-control" required>
+                <div class="valid-feedback">looks good!</div>
+                <div class="invalid-feedback">Price should be valid</div>
+            </div>
+            <div class="col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name="list[country]" placeholder="Enter country" class="form-control" required>
+                <div class="valid-feedback">looks good!</div>
+                <div class="invalid-feedback">Country name should be valid</div>
+            </div>
+        </div>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="list[location]" placeholder="Enter location" class="form-control" required>
+            <div class="valid-feedback">looks good!</div>
+            <div class="invalid-feedback">Location should be valid</div>
+        </div>
+        <br>
+        <button class="btn add-btn">Add</button>
+        <br>
+        <br>
+    </form>
+</div>
+</div>
+</body>

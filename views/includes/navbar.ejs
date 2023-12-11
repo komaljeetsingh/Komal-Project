@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .btn-search{
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 9px;
+    padding: 0 0.9rem 0 0.9rem;
+  }
+  .btn-search:hover{
+    background-color: #fe424d;
+    color: #fff;
+  }
+  .btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+</style>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="/listings">Explore</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <form class="d-flex" action="/listings/search" method="post">
+                     <label for="country"></label>
+                    <input class="form-control me-2" name="country" placeholder="Search destination">
+                    <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                </form>
+            </div>
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/listings/new">Airbnb your home</a>
+              <% if(!currentUser){ %>
+              <a class="nav-link" href="/signup"><b>SignUp</b></a>
+              <a class="nav-link" href="/login"><b>Login</b></a>
+              <% } %>
+              <% if(currentUser){ %>
+              <a class="nav-link" href="/logout"><b>Logout</b></a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </nav>
+</body>
+</html>
